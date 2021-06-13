@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>
+            Output
+        </title>
+        <style>
+            .container{
+                margin-left:320px;
+                margin-top:50px;
+            }
+            table{
+                border:5px solid #000;;
+            }
+            td,th{
+                padding:5px;
+            }
+            thead{
+                background-color:antiquewhite;
+            }
+            button{
+                margin-left:500px;
+                font-size: 25px;
+                color:#fff;
+                background-color: blue;
+                border-radius: 15px;;
+            }
+            a{
+                text-decoration: None;
+                color:#fff;
+            }
+        </style>
+    </head>
+    <body>
+        <button><a href="{% url 'download' %}">Download</a></button>
+        <div class="container">
+            <table border="5px solid #000;">
+                <thead>
+                    <tr>
+                        <th>Email</th>
+                        <th>Phone Numer</th>
+                        <th style="width:250px;">Location</th>
+                    </tr>
+                </thead>
+                {% for i in upf %}
+                <tbody>
+                    <tr>
+                       <td>{{i.email}}</td>
+                       <td>{{i.phn}}</td>
+                       <td style="width:250px;">{{i.file}}</td>
+                    </tr>
+                </tbody>
+                {% endfor %}
+            </table>
+        </div>
+    </body>
+</html>

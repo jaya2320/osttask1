@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>Input</title>
+        <style>
+            .container{
+                margin-left:600px;
+                margin-top:100px;
+                width:300px;
+                padding:50px;
+                background-color:aliceblue ;
+            }
+            .container select{
+                margin-left:60px;
+                margin-top:20px;
+                font-size: 20px;
+            }
+            .container input{
+                margin-left:60px;
+                margin-top:20px;
+                font-size: 20px;
+            }
+            .container button{
+                margin-left:100px;
+                margin-top:20px;
+                font-size: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+        <table>
+        <form action="upload" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <tr>
+                <p>Upload File or Files</p>
+    </tr>
+    <tr>
+       <td>
+        <input type="file" name="upload" multiple>
+       </td>
+    </tr>
+    <tr>
+       <td>
+        <button valu="submit">Submit</button>
+       </td>
+    </tr>
+    </form>
+</table>
+</div>
+    </body>
+</html>
